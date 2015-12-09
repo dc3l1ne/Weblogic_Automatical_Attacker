@@ -1,4 +1,5 @@
 # Weblogic_Automatical_Attacker
+##写在开始
 因为学习python不久，所以代码难免会存在各种错误和bug，当然还有效率问题，如果你发现了bug或者遇到无法解决的问题，有更好的点子或者建议，欢迎发邮件共同讨论<br>
 地址:admin@185.es<br>
 如果你使用本软件，就默认你了解基本的cmd命令，会使用cd命令进入程序所在的文件夹，会安装python模块<br>
@@ -22,7 +23,7 @@ testpage='456.jsp'
 本程序仅用于学习交流，请勿用于非法用途以及商业用途！<br>
 
 
-
+##At the beginning
 I am a python beginner.so there are some errors and bugs in this program but i didn't find yet,please notice me if you meet with it.<br>
 You can send me an email with detail error status and screenshots,better with the username and password of weblogic.<br>
 If you have better ideas and suggestions,please email me ASAP,we can make it better.<br>
