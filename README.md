@@ -4,6 +4,7 @@
 地址:admin@185.es<br>
 如果你使用本软件，就默认你了解基本的cmd命令，会使用cd命令进入程序所在的文件夹，会安装python模块<br>
 有关以上的问题不再单独写明<br>
+有关详情可看https://185.es/?p=694<br>
 ##需要另外安装的模块
 requests http://docs.python-requests.org/en/latest/<br>
 BeautifulSoup http://www.crummy.com/software/BeautifulSoup/<br>
