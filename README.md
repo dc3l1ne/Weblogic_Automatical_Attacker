@@ -6,7 +6,7 @@
 ##需要另外安装的模块
 requests http://docs.python-requests.org/en/latest/<br>
 BeautifulSoup http://www.crummy.com/software/BeautifulSoup/<br>
-本程序需要和https://github.com/dc3l1ne/Weblogic-Weakpassword-Scnner配合使用<br>
+本程序需要和https://github.com/dc3l1ne/Weblogic-Weakpassword-Scnner 配合使用<br>
 ##使用方法
 编辑main.py<br>
 例子：<br>
