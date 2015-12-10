@@ -10,6 +10,7 @@ requests http://docs.python-requests.org/en/latest/<br>
 BeautifulSoup http://www.crummy.com/software/BeautifulSoup/<br>
 本程序需要和https://github.com/dc3l1ne/Weblogic-Weakpassword-Scnner 配合使用<br>
 ##使用方法
+安装Python2.7.8
 编辑main.py<br>
 例子：<br>
 如果你的jsp shell的地址是http://www.google.com/123/456.jsp<br>
@@ -39,6 +40,7 @@ BeautifulSoup http://www.crummy.com/software/BeautifulSoup/<br>
 It work with https://github.com/dc3l1ne/Weblogic-Weakpassword-Scnner<br>
 So,you must know how to use Scanner(Don't repeat at this time)<br>
 ##Tutorial
+Install Python2.7.8
 Modify main.py<br>
 If your jsp shell url is : http://www.google.com/123/456.jsp<br>
 <pre>
