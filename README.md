@@ -7,7 +7,7 @@
 有关详情可看https://185.es/?p=694<br>
 ##需要另外安装的模块
 requests http://docs.python-requests.org/en/latest/<br>
-BeautifulSoup http://www.crummy.com/software/BeautifulSoup/<br>
+BeautifulSoup4 http://www.crummy.com/software/BeautifulSoup/<br>
 本程序需要和https://github.com/dc3l1ne/Weblogic-Weakpassword-Scnner 配合使用<br>
 ##使用方法
 安装Python2.7.8
@@ -36,7 +36,7 @@ If you use this tool,we expect that you:<br>
 For more details(If you can read Chinese):https://185.es/?p=694<br>
 ##Pre-requires module:<br>
 requests http://docs.python-requests.org/en/latest/<br>
-BeautifulSoup http://www.crummy.com/software/BeautifulSoup/<br>
+BeautifulSoup4 http://www.crummy.com/software/BeautifulSoup/<br>
 It work with https://github.com/dc3l1ne/Weblogic-Weakpassword-Scnner<br>
 So,you must know how to use Scanner(Don't repeat at this time)<br>
 ##Tutorial
