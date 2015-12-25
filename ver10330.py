@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 Copyright Dc3
 https://185.es
 '''
-class ver10330():
+class ver12000():
 	def do_login(self,url,usr,pwd,headers,count):
 		ctest=0
 		while True:
@@ -324,37 +324,38 @@ class ver10330():
 						depoly_data2={'AppApplicationInstallPortlettargetStyle': 'Application',
 						'AppApplicationInstallPortletfrsc':self.hash
 						}
-						depoly_data3={'AppApplicationInstallPortlettargetBean.chosenStandaloneServers':'com.bea.console.handles.JMXHandle%2528%2522com.bea%253AName%253D'+self.server_name+'myserver%252CType%253DServer%2522%2529',
-						'AppControlStartPortletfrsc':self.hash
-						}
-						depoly_data4={
+						depoly_data3={
 							'AppApplicationInstallPortletname': depolyname,
 							'AppApplicationInstallPortletsecurityModel': 'DDOnly',
 							'AppApplicationInstallPortletstagingStyle': 'Default',
-							'AppApplicationInstallPortletnoStageSourcePath': self.path+'\\'+warname,
+							'AppApplicationInstallPortletplanStagingStyle': 'Default',
 							'AppApplicationInstallPortletfrsc':self.hash
-							}
+						}
+						depoly_data4={'AppApplicationInstallPortletconfigurationAction':'Yes',
+						'AppApplicationInstallPortletfrsc':self.hash
+						}
 					else:
 						depoly_data1={'AppApplicationInstallPortletselectedAppPath': self.path+'/'+warname,
+						'AppApplicationInstallPortletselectedAppPath': self.path+'/'+warname,
 						'AppApplicationInstallPortletfrsc':self.hash
 						}
 						depoly_data2={'AppApplicationInstallPortlettargetStyle': 'Application',
 						'AppApplicationInstallPortletfrsc':self.hash
 						}
-						depoly_data3={'AppApplicationInstallPortlettargetBean.chosenStandaloneServers':'com.bea.console.handles.JMXHandle%2528%2522com.bea%253AName%253D'+self.server_name+'myserver%252CType%253DServer%2522%2529',
-						'AppControlStartPortletfrsc':self.hash
-						}
-						depoly_data4={
+						depoly_data3={
 							'AppApplicationInstallPortletname': depolyname,
 							'AppApplicationInstallPortletsecurityModel': 'DDOnly',
 							'AppApplicationInstallPortletstagingStyle': 'Default',
-							'AppApplicationInstallPortletnoStageSourcePath': self.path+'/'+warname,
+							'AppApplicationInstallPortletplanStagingStyle': 'Default',
 							'AppApplicationInstallPortletfrsc':self.hash
-							}
+						}
+						depoly_data4={'AppApplicationInstallPortletconfigurationAction':'Yes',
+						'AppApplicationInstallPortletfrsc':self.hash
+						}
 					print 'Depolying....',
 					requests.post(url+'/console.portal?AppApplicationInstallPortlet_actionOverride=/com/bea/console/actions/app/install/appSelected',cookies=self.cookies,headers=headers,data=depoly_data1,timeout=20)
 					requests.post(url+'/console.portal?AppApplicationInstallPortlet_actionOverride=/com/bea/console/actions/app/install/applicationTargetsSelected',data=depoly_data2,headers=headers,cookies=self.cookies)
-					requests.post(url+'/console.portal?AppApplicationInstallPortlet_actionOverride=/com/bea/console/actions/app/install/targetStyleSelected',cookies=self.cookies,headers=headers,data=depoly_data3,timeout=20)
+					requests.post(url+'/console.portal?AppApplicationInstallPortlet_actionOverride=/com/bea/console/actions/app/install/saveIdentity',cookies=self.cookies,headers=headers,data=depoly_data3,timeout=20)
 					requests.post(url+'/console.portal?AppApplicationInstallPortlet_actionOverride=/com/bea/console/actions/app/install/finish',cookies=self.cookies,headers=headers,data=depoly_data4,timeout=20)				
 					print 'OK!\n'
 					return True
