@@ -15,7 +15,7 @@ from ver12000 import ver12000
 warname='1z85qd.war'
 depolyname='1z85qd'
 testpage='a.jsp'
-count=3 #重试次数
+count=3 #Retry
 
 headers = {
 	'Accept-Language': 'en-US;q=0.5,en;q=0.3',
