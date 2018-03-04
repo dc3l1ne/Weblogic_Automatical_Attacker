@@ -10,10 +10,7 @@ from ver9000 import ver9000
 from ver10330 import ver10330
 from ver10300 import ver10300
 from ver12000 import ver12000
-'''
-Copyright Dc3
-https://185.es
-'''
+
 
 warname='1z85qd.war'
 depolyname='1z85qd'
