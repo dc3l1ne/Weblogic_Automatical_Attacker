@@ -5,10 +5,7 @@ import requests
 import Queue
 import time
 from bs4 import BeautifulSoup
-'''
-Copyright Dc3
-https://185.es
-'''
+
 class ver12000():
 	def do_login(self,url,usr,pwd,headers,count):
 		ctest=0
