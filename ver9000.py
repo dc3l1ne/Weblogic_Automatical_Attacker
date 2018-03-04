@@ -5,10 +5,7 @@ import requests
 import Queue
 import time
 from bs4 import BeautifulSoup
-'''
-Copyright Dc3
-https://185.es
-'''
+
 class ver9000():
 	def get_cookie(self,url,headers,count):
 		ctest=0
