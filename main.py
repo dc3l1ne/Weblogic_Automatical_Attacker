@@ -2,7 +2,7 @@
 import re
 import urllib
 import requests
-import Queue
+import sys
 import time
 from bs4 import BeautifulSoup
 from ver81 import ver81
@@ -156,40 +156,35 @@ def get_version(url,count):
 				return False
 
 if __name__ == '__main__':
-	list_data=Queue.Queue(maxsize = 0)
-	for i in open("aa.txt").readlines():
-		i=i.strip('\n')
-		list_data.put(i)
-	print 'Total URLs:%d\n' %list_data.qsize()
-	time.sleep(2)
-	while True:
-		if list_data.qsize() != 0:
-			info=list_data.get()
-			url=info.split(' ')[0]
-			usr=info.split(' ')[1].split('/')[0]
-			pwd=info.split(' ')[1].split('/')[1]
-			print 'Target:'+url+'\n'
-			ver=get_version(url,count)
-			if ver != None and ver != False:
-				if ver == 8:
-					run_ver81(url,usr,pwd,count)
-				elif ver == 10300:
-					run_ver10300(url,usr,pwd,count)
-				elif ver == 9:
-					run_ver9000(url,usr,pwd,count)
-				else:
-					verse=re.search(r'10.3[.\w]+',ver)
-					if verse:
-						run_ver10330(url,usr,pwd,verse,count)
+	try:
+		with open(sys.argv[1]) as f:
+			for info in f:
+				info=info.strip()
+				url='http://%s/console'%info.split(' ')[0]
+				usr=info.split(' ')[1].split('/')[0]
+				pwd=info.split(' ')[1].split('/')[1]
+				print 'Target:'+url+'\n'
+				ver=get_version(url,count)
+				if ver != None and ver != False:
+					if ver == 8:
+						run_ver81(url,usr,pwd,count)
+					elif ver == 10300:
+						run_ver10300(url,usr,pwd,count)
+					elif ver == 9:
+						run_ver9000(url,usr,pwd,count)
 					else:
-						verse=re.search(r'12[.\w]+',ver)
+						verse=re.search(r'10.3[.\w]+',ver)
 						if verse:
-							run_ver12000(url,usr,pwd,verse,count)
-			else:
-				print 'Get version error!'
-				f=open('error.txt','a')
-				f.write('Get version error! '+url+'\n')
-				f.close()
-			time.sleep(1)			
-		else:
-			break
+							run_ver10330(url,usr,pwd,verse,count)
+						else:
+							verse=re.search(r'12[.\w]+',ver)
+							if verse:
+								run_ver12000(url,usr,pwd,verse,count)
+				else:
+					print 'Get version error!'
+					f=open('error.txt','a')
+					f.write('Get version error! '+url+'\n')
+					f.close()
+				time.sleep(1)
+	except KeyboardInterrupt:
+		exit()
